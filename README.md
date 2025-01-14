@@ -1,39 +1,34 @@
 # ElvedaDPI
 
-**ElvedaDPI**, DNS zorlamasını kaldırmak ve internet sansürünü aşmak için kullanılan bir araçtır. Bu yazılım, **GoodbyeDPI** tabanlıdır ve kullanıcıların Cloudflare gibi güvenilir DNS sunucularını kullanarak daha açık bir internet deneyimi yaşamalarına yardımcı olur. 
+**ElvedaDPI**, DNS zorlamasını kaldırmak ve internet sansürünü aşmak için kullanılan bir araçtır. Bu yazılım, **[GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI)** projesinden esinlenilerek geliştirilmiş ve Türkiye gibi ülkelerdeki DNS zorlamalarını bypass etmek amacıyla optimize edilmiştir. Kullanıcıların Cloudflare gibi güvenilir DNS hizmetlerini kullanmasını sağlayarak, daha açık ve güvenli bir internet deneyimi yaşamasına yardımcı olur.
 
-> **Not:** Bu araç **sadece eğitim ve araştırma amaçlı** geliştirilmiştir ve yasal olmayan herhangi bir kullanım için tasarlanmamıştır.
+> **Not:** Bu yazılım **eğitim ve araştırma amaçlı** geliştirilmiştir. Yasal olmayan bir amaçla kullanımı kesinlikle teşvik edilmemektedir.
 
 ---
 
 ## Hukuki Uyarı ve Sorumluluk Reddi
 
-**ElvedaDPI**, DNS yönlendirme ve sansür gibi teknik sorunların araştırılması ve çözülmesi amacıyla sunulmaktadır. Bu yazılımın kullanımı tamamen kullanıcının sorumluluğundadır ve aşağıdaki hukuki maddeler bu sorumluluğu açıkça belirtir:
+Bu yazılım, ağ yönetimi ve internet sansürüyle ilgili teknik konuların anlaşılması amacıyla sunulmaktadır. Kullanımı tamamen kullanıcının sorumluluğundadır. Yazılımın herhangi bir yasa dışı kullanımı veya kötüye kullanımı, geliştiricinin sorumluluğunda değildir.
 
 1. **Eğitim Amacı:**
-   - Bu araç, **eğitim ve farkındalık oluşturma** amacıyla geliştirilmiştir. Kullanıcılar, internet özgürlüğü ve ağ yönetimi konularında bilgi edinmek için aracı kullanabilirler.
-   - Bu yazılım, herhangi bir ülkenin yasa veya regülasyonlarını ihlal etmeyi teşvik etmez.
+   - Yazılım, yalnızca teknik bilgi edinme ve farkındalık yaratma amacıyla tasarlanmıştır.
+   - Yasal olmayan hiçbir aktiviteyi teşvik etmez.
 
 2. **Sorumluluk Reddi:**
-   - Araç, bireylerin kendi cihazlarında internet bağlantısını yönetmelerine ve sansür mekanizmalarını anlamalarına yardımcı olmak amacıyla geliştirilmiştir.
-   - Kullanım sırasında doğabilecek sonuçlardan **geliştirici hiçbir şekilde sorumlu değildir**.
-   - Kullanıcı, yazılımı kullanırken yürürlükteki tüm yasalara ve düzenlemelere uymayı kabul eder.
+   - Yazılımın kullanımı sırasında meydana gelebilecek sonuçlardan **geliştirici sorumlu değildir**.
+   - Kullanıcılar, kendi ülkelerindeki yasal düzenlemelere uymakla yükümlüdür.
 
-3. **Yasal Uygunluk:**
-   - Kullanıcılar, bulundukları ülkenin yasal düzenlemelerini kontrol etmekten ve bu düzenlemelere uygun hareket etmekten sorumludur.
-   - Yazılım, herhangi bir yasa dışı faaliyeti desteklemek amacıyla tasarlanmamıştır.
-
-4. **Açık Kaynak Lisansı:**
-   - Bu yazılım açık kaynak kodludur ve kullanıcılar yazılım üzerinde değişiklik yapabilir. Ancak, yapılan tüm değişikliklerin **yasalara uygun olması** zorunludur.
+3. **GoodbyeDPI Kaynakları:**
+   - **ElvedaDPI**, [GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI) projesini temel alır. GoodbyeDPI'nin sağladığı açık kaynak araçlar, Türkiye gibi ülkelerde DNS zorlamasını aşmak için optimize edilmiştir.
 
 ---
 
 ## Dosyalar ve Yapı
 
-Proje, aşağıdaki dosya ve klasörlerden oluşur:
+Proje aşağıdaki dosya ve klasörlerden oluşur:
 
-- **x86/**: 32-bit sistemler için gerekli dosyalar.
-- **x86_64/**: 64-bit sistemler için gerekli dosyalar.
+- **x86/**: 32-bit işletim sistemleri için gerekli dosyalar.
+- **x86_64/**: 64-bit işletim sistemleri için gerekli dosyalar.
 - **1.cmd**: DNS bypass hizmetini kurmak ve başlatmak için kullanılan dosya.
 - **2.cmd**: DNS bypass hizmetini yeniden yapılandırmak ve başlatmak için kullanılan dosya.
 - **service_remove.cmd**: Hizmeti ve ilgili dosyaları tamamen kaldırmak için kullanılan dosya.
@@ -43,7 +38,7 @@ Proje, aşağıdaki dosya ve klasörlerden oluşur:
 ## Kurulum ve Kullanım
 
 ### 1. **ElvedaDPI'yi Uygun Bir Klasöre Taşıyın**
-Dosyaları uygun bir konuma taşıyın. Örneğin, masaüstünde bir klasör yerine `C:\ElvedaDPI\` gibi bir konum önerilir. Böylece dosyalar daha düzenli bir şekilde yönetilebilir.
+Dosyaları uygun bir konuma taşıyın. Örneğin, `C:\ElvedaDPI\` gibi bir klasöre yerleştirmeniz önerilir. Bu, yazılımın daha düzenli bir şekilde çalışmasını sağlar. Masaüstü gibi geçici alanlarda dosyaları çalıştırmaktan kaçının.
 
 ---
 
@@ -55,7 +50,7 @@ DNS bypass hizmetini kurmak ve başlatmak için:
 
 Kurulum sırasında aşağıdaki işlemler yapılır:
 - GoodbyeDPI hizmeti oluşturulur ve başlatılır.
-- DNS sunucusu olarak güvenilir Cloudflare adresleri atanır:
+- DNS sunucusu olarak güvenilir **Cloudflare** adresleri atanır:
   - **IPv4**: `1.1.1.1` (Port: 53)
   - **IPv6**: `2606:4700:4700::1111` (Port: 53)
 
@@ -88,19 +83,44 @@ Hizmeti tamamen kaldırmak veya hataları düzeltmek için:
 
 ---
 
-### Yeniden Kurulum
-Eğer hizmeti yeniden kurmak isterseniz:
-1. `1.cmd` ve ardından `2.cmd` dosyalarını tekrar yönetici olarak çalıştırın.
-2. Bilgisayarı yeniden başlatın.
+## Alternatif DNS Sunucuları
+
+Eğer Cloudflare DNS (1.1.1.1) bağlantınızda sorun yaşanırsa, alternatif DNS sağlayıcılarını kullanabilirsiniz. Aşağıdaki ayarları, `1.cmd` ve `2.cmd` dosyasında belirtilen DNS adresleri yerine koyabilirsiniz.
+
+### 1. **Google DNS**
+- **IPv4**: `8.8.8.8` ve `8.8.4.4`
+- **IPv6**: `2001:4860:4860::8888` ve `2001:4860:4860::8844`
+
+### 2. **OpenDNS**
+- **IPv4**: `208.67.222.222` ve `208.67.220.220`
+- **IPv6**: `2620:119:35::35` ve `2620:119:53::53`
+
+### 3. **Quad9**
+- **IPv4**: `9.9.9.9` ve `149.112.112.112`
+- **IPv6**: `2620:fe::fe` ve `2620:fe::9`
+
+> **Not:** DNS adreslerini değiştirmek için `.cmd` dosyalarındaki `--dns-addr` ve `--dnsv6-addr` parametrelerini güncellemeniz yeterlidir.
 
 ---
 
-## Dikkat Edilmesi Gerekenler
+## Çalışmazsa Ne Yapmalı?
 
-- **Yönetici Yetkileri:** Tüm komut dosyaları mutlaka **yönetici olarak** çalıştırılmalıdır.
-- **Uygun Konum:** Dosyaları taşımadan çalıştırmamanız önerilir. Örneğin: `C:\ElvedaDPI\`.
-- **Kurulum Sırası:** İlk olarak `1.cmd`, ardından gerekirse `2.cmd` çalıştırılmalıdır.
-- **Sorun Giderme:** Eğer bir hata ile karşılaşırsanız `service_remove.cmd` dosyasını çalıştırarak yeniden yüklemeyi deneyin.
+Eğer yazılım çalışmazsa veya beklenmedik hatalar alırsanız, aşağıdaki adımları deneyebilirsiniz:
+
+1. **Yönetici Olarak Çalıştırmayı Doğrulayın**  
+   - Komut dosyalarının her biri mutlaka **yönetici olarak** çalıştırılmalıdır.
+
+2. **Hizmeti Kaldırın ve Yeniden Yükleyin**  
+   - `service_remove.cmd` dosyasını çalıştırarak tüm hizmetleri kaldırın. Ardından `1.cmd` dosyasını yönetici olarak yeniden çalıştırın.
+
+3. **Alternatif DNS Kullanımı**  
+   - Cloudflare yerine başka bir DNS sağlayıcısını deneyin (Google DNS, OpenDNS, Quad9 gibi).
+
+4. **Windows Güvenlik Duvarını Kontrol Edin**  
+   - GoodbyeDPI'nin çalışması, güvenlik duvarı veya antivirüs tarafından engelleniyor olabilir. Gerekirse izin verin.
+
+5. **GoodbyeDPI’nin Orijinal Sürümünü Deneyin**  
+   - Orijinal [GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI) projesini inceleyerek ilgili araçları çalıştırmayı deneyebilirsiniz.
 
 ---
 
@@ -108,7 +128,7 @@ Eğer hizmeti yeniden kurmak isterseniz:
 
 - **Eğitim Amaçlı Kullanım:** Bu yazılım, DNS sansürü ve ağ yönetimi hakkında bilgi edinmek için tasarlanmıştır.
 - **Araştırma ve Test:** Araç, ağ iletişimlerini test etmek ve DNS yönlendirme sorunlarını analiz etmek için kullanılabilir.
-- **Güvenlik ve Gizlilik:** Cloudflare DNS kullanımı, kullanıcıların güvenliğini ve gizliliğini artırmayı hedefler. Ancak, kullanıcılar bu aracı yasal çerçeve içinde kullanmakla yükümlüdür.
+- **Güvenlik ve Gizlilik:** Cloudflare DNS gibi güvenilir DNS hizmetlerini kullanarak, çevrimiçi güvenliği ve gizliliği artırmayı hedefler.
 
 ---
 
@@ -122,6 +142,6 @@ Eğer yazılımı kullanırken bir sorunla karşılaşırsanız:
 
 ## Lisans
 
-Bu yazılım **açık kaynak** olarak sunulmuştur ve lisanslıdır. Yazılımın kullanımı sırasında yerel yasalara uymak tamamen kullanıcının sorumluluğundadır. 
+Bu yazılım açık kaynak olarak sunulmuştur ve lisanslıdır. Kullanımı sırasında yerel yasalara uyulması, tamamen kullanıcının sorumluluğundadır.
 
 **ElvedaDPI**, sadece eğitim, araştırma ve farkındalık oluşturma amacıyla kullanılmalıdır.
