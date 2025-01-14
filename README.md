@@ -135,7 +135,7 @@ Eğer yazılım çalışmazsa veya beklenmedik hatalar alırsanız, aşağıdaki
 ## Destek ve Katkı
 
 Eğer yazılımı kullanırken bir sorunla karşılaşırsanız:
-- [GitHub Issues](https://github.com/kullaniciadi/ElvedaDPI/issues) sayfasından sorun bildirebilirsiniz.
+- [GitHub Issues](https://github.com/bed0c/ElvedaDPI/issues) sayfasından sorun bildirebilirsiniz.
 - Katkıda bulunmak isterseniz projeyi forklayıp değişikliklerinizi paylaşabilirsiniz.
 
 ---
